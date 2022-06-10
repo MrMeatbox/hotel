@@ -1,16 +1,13 @@
-
-.App{
+.App {
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color:skyblue;
+  background-color: skyblue;
 }
-:root{
-  --white: #FFF;
+:root {
+  --white: #fff;
   --bg: #313552;
-  --grey: #CCC;
-  --sucess-bg: #6BCB77;
+  --grey: #ccc;
+  --sucess-bg: #6bcb77;
 }
-
-
