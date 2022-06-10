@@ -1,0 +1,104 @@
+.App{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.wrapper{
+    width: 100%;
+    margin-top: 20px;
+    align-items: center;
+    max-width: 500px;
+    margin-right: 120px;
+    padding: 30px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 15px 20px 20px 10px rgba(0,0,0,.1);
+  }
+   .logo img{
+    width: 100%;
+    max-width: 100px;
+    display: block;
+    margin-left: 190px;
+  }
+   .c1{
+    margin-top: 10px;
+    text-align: center;
+  }
+   .c1 h2{
+    font-size: 1.4em;
+    font-weight: 500;
+  }
+  
+  
+   .form input{
+    width: 100%;
+    padding: 20px 50px;
+    border-color:black; 
+    border-style: solid;
+    border-radius:10px;
+   
+    transition: 0.5s;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+  }
+
+  /* .form form input :focus{
+    border-color: royalblue;
+    border-style: solid;
+  } */
+  
+  .submit{
+    background: #313552;;
+    color: #FFF;
+    font-weight: 500;
+    border: none;
+    font-size: 1em;
+    padding: 15px 40px;
+    border-radius: 5px;
+    cursor:grab;
+    font-family: 'Fira code';
+    margin-left: 10px;
+  }
+  .eInput{
+    position: relative;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  
+  .icon{
+    position: absolute;
+    top: 25px;
+    left: 15px;
+    color:gray;
+  }
+   
+  .inputinfo{
+    font-size: .8em;
+    font-family: 'Fira code';
+  }
+  .forgotpass{
+    font-size: .9em;
+    float:right;
+    margin-left: 20px;
+    background-color: #FFF;
+  }
+
+  .homeButton{
+    background-color: royalblue;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 10px;
+    position: relative;
+    left: 990px;
+    bottom: 330px;
+    cursor:pointer;
+    box-shadow: 15px 10px 10px 10px rgba(0,0,0,.1);
+    font-family: 'Fira code';
+    font-weight: 500;
+    color: white;
+  }
+  
