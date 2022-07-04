@@ -1,32 +1,84 @@
-import React from "react"
+import React from "react";
 
-const Navbar=()=>{
-    return(
-        <nav className="navbar navbar-expand-lg bg-light">
-        <div className="container-fluid">
-          <a className="navbar-brand" href="#">Navbar</a>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
+const Navbar = () => {
+  return (
+    <>
+      <nav
+        class="navbar navbar-expand-lg navbar-dark bg-primary"
+        style={{
+          backgroundImage: "linear-gradient(to right, #1034A6, #F62D2D)",
+        }}
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            TRAVELLA
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav">
-              <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">Home</a>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/home">
+                  Home
+                </a>
               </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">Features</a>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  Policies
+                </a>
               </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">Pricing</a>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  Pricing
+                </a>
               </li>
-              <li className="nav-item">
-                <a className="nav-link disabled">Disabled</a>
+              <li class="nav-item dropdown" style={{ marginRight: "65px" }}>
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdownMenuLink"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Options
+                </a>
+                <ul
+                  class="dropdown-menu"
+                  aria-labelledby="navbarDropdownMenuLink"
+                >
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Wishlist
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">
+                      Account setting
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="/">
+                      Logout
+                    </a>
+                  </li>
+                </ul>
               </li>
             </ul>
           </div>
         </div>
       </nav>
-    )
-}
+    </>
+  );
+};
 
 export default Navbar;

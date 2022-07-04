@@ -4,7 +4,8 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background-color:skyblue;
+  /* background-color:skyblue; */
+  background-image: linear-gradient(to right, #1034A6, #F62D2D);
 }
 :root{
   --white: #FFF;

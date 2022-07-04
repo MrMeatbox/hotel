@@ -1,5 +1,30 @@
 
+.main{
+    width: 100%;
+}
+
 .welcome{
     color: aliceblue;
     font-family: 'Fira code';
+    
+}
+
+/* h2{
+    position: absolute;
+    left: 500px;
+    top:300px;
+} */
+
+.col{
+    margin-top: 10px;
+}
+
+.card{
+    box-shadow: 15px 20px 20px 5px rgba(0,0,0,.1);
+    width: 300px;
+}
+
+
+.card-img-top{
+    width: 300px;
 }

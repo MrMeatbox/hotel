@@ -1,38 +1,35 @@
 import React from "react";
-import { signInWithEmailAndPassword } from "firebase/auth";
-import project_logo from "../../components/cable-car-cabin.png";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import project_logo from "../components/cable-car-cabin.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faLock } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
-import "./Login.css";
-import "../../App.css";
-import { auth } from "../../Config/firebaseConfig";
+import "./register.css";
+import "../App.css";
+import { auth } from "../Config/firebaseConfig";
 import { Link, useHistory, useLocation } from "react-router-dom";
 
-const Login = () => {
+const Register = () => {
   const getData = (val) => {
     console.log(val.target.value);
   };
 
-  const [loginEmail, setLoginEmail] = useState("");
-  const [loginPassword, setLoginPassword] = useState("");
-  const history = useHistory();
+  const [registerEmail, setRegisterEmail] = useState("");
+  const [registerPassword, setRegisterPassword] = useState("");
 
-  const login = async () => {
+  const register = async () => {
     try {
-      const user = await signInWithEmailAndPassword(
+      const user = await createUserWithEmailAndPassword(
         auth,
-        loginEmail,
-        loginPassword
+        registerEmail,
+        registerPassword
       );
-      console.log("logged in");
-      history.push("/home");
+      console.log(user);
     } catch (error) {
       console.log(error.message);
     }
   };
-  const logout = async () => {};
   return (
     <div className="App">
       <div></div>
@@ -54,7 +51,7 @@ const Login = () => {
                   id="input1"
                   placeholder="Enter email address"
                   onChange={(event) => {
-                    setLoginEmail(event.target.value);
+                    setRegisterEmail(event.target.value);
                   }}
                 />
               </div>
@@ -62,40 +59,23 @@ const Login = () => {
                 <FontAwesomeIcon className="icon" icon={faLock} />
                 <input
                   className="inputinfo"
-                  type="text"
+                  type="password"
                   id="input2"
                   placeholder="Enter password"
                   onChange={(event) => {
-                    setLoginPassword(event.target.value);
+                    setRegisterPassword(event.target.value);
                   }}
                 />
               </div>
-              <div className="forgotpass">
-                <a href="/fogotpass">Forgot password?</a>
-              </div>
               <div>
-                <button type="button" className="submit" onClick={login}>
-                  {
-                    <Link
-                      to="/home"
-                      type="button"
-                      className="btn shadow-none"
-                      style={{
-                        textDecoration: "none",
-                        color: "white",
-                        border: "none",
-                        padding: "5px 10px",
-                        fontFamily: "Fira code",
-                      }}
-                    ></Link>
-                  }
-                  Login
+                <button type="button" className="submit" onClick={register}>
+                  Register
                 </button>
               </div>
               <div>
                 <button type="button" className="homebtn">
                   <Link
-                    to="/register"
+                    to="/login"
                     style={{
                       textDecoration: "none",
                       border: "none",
@@ -103,7 +83,7 @@ const Login = () => {
                     }}
                   >
                     {" "}
-                    Register
+                    Login
                   </Link>
                 </button>
               </div>
@@ -115,4 +95,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Register;

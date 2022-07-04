@@ -1,0 +1,18 @@
+h1 {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+}
+
+.resetPass {
+  border: none;
+  height: 70px;
+  width: 150px;
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  background-color: crimson;
+  color: white;
+  font-family: "Fira code";
+  border-radius: 10px;
+}
