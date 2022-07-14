@@ -14,25 +14,31 @@
   width: 100%;
   max-width: 500px;
   padding: 30px 30px;
+  padding-top: 10px;
   background: #fff;
   border-radius: 20px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
 }
 .wrapper .content .logo img {
-  width: 20%;
+  width: 50%;
   max-width: 100px;
   margin-left: 160px;
   margin-top: 0px;
   position: relative;
+  padding: 20px;
 }
 .wrapper .content .c1 {
+  font-family: "Fira code";
   margin-top: 10px;
   text-align: center;
   margin-top: 20px;
 }
-.wrapper .content .c1 span {
+.wrapper .content .c1 h2 {
+  font-family: "Fira code";
   font-size: 1.4em;
   font-weight: 500;
+  margin-top: 10px;
+  padding: 20px;
 }
 .wrapper .content .form {
   margin-top: 20px;
@@ -70,6 +76,7 @@
 }
 .status {
   padding: 20px;
+  font-family: "Fira code";
   color: #721c24;
   background-color: #f8d7da;
   border: 1px solid #f5c6cb;
@@ -86,6 +93,7 @@
 }
 .forgotpass {
   font-size: 0.9em;
+  font-family: "Fira code";
   float: right;
   margin-left: 20px;
   background-color: #fff;

@@ -2,6 +2,7 @@ import "./App.css";
 import Register from "./Register/register";
 import Login from "./Pages/Login/Login";
 import Home from "./Pages/Homepage/Home";
+import Book from "./Pages/BookHotel/bookHotel";
 import Welcome from "./Pages/welcome/welcome";
 import Forgetpass from "./Pages/Forgetpass/Forgetpass";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -30,6 +31,10 @@ function App() {
 
           <Route exact path="/register">
             <Register />
+          </Route>
+
+          <Route exact path="/bookHotel">
+            <Book />
           </Route>
         </Switch>
       </Router>
