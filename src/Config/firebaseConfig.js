@@ -1,5 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+import { getDatabase } from "firebase/database";
+import "firebase/database";
 const firebaseConfig = {
   apiKey: "AIzaSyCl2_r8fJSN8KfjmPrmWjvrLuf0hzxMXUk",
   authDomain: "hotelapp-d4bdc.firebaseapp.com",
@@ -12,3 +14,4 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
+export const database = getDatabase(app);

@@ -6,6 +6,7 @@ import Book from "./Pages/BookHotel/bookHotel";
 import Welcome from "./Pages/welcome/welcome";
 import Forgetpass from "./Pages/Forgetpass/Forgetpass";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import SignIn from "./Pages/Login/SignIn";
 function App() {
   return (
     <div>
@@ -23,6 +24,10 @@ function App() {
 
           <Route exact path="/">
             <Welcome />
+          </Route>
+
+          <Route exact path="/test">
+            <SignIn />
           </Route>
 
           <Route exact path="/fogotpass">

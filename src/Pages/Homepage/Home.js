@@ -6,43 +6,8 @@ import { initializeApp } from "firebase/app";
 import { getDatabase, ref, set } from "firebase/database";
 
 const Home = () => {
-  // const [valid, setvalid] = useState(true);
-  // const [hide, sethide] = useState(true);
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   const book_date = document.getElementById("book-date");
-  //   const book_time = document.getElementById("book-time");
-
-  //   const leave_date = document.getElementById("leave-date");
-  //   const leave_time = document.getElementById("leave-time");
-
-  //   if (
-  //     !book_date.value ||
-  //     !book_time.value ||
-  //     !leave_date.value ||
-  //     !leave_time.value
-  //   ) {
-  //     alert("Please fill all the fields");
-  //   } else {
-  //     writeUserData();
-  //     function writeUserData() {
-  //       const db = getDatabase();
-  //       set(ref(db, "data/"), {
-  //         bookingdate: book_date.value,
-  //         bookingtime: book_time.value,
-  //         leave_date: leave_date.value,
-  //         leave_time: leave_time.value,
-  //       });
-  //     }
-  //     alert("Your booking has been made");
-  //     // const BookPageDiv = document.querySelector(".box");
-  //     // const container = document.querySelector(".container");
-  //     // setvalid(!valid + BookPageDiv.classList.add("show"));
-  //     // sethide(!hide + container.classList.add("hide"));
-  //   }
-  // };
   return (
-    <div className="main">
+    <div>
       <Navbar />
       <div className="container">
         <div className="content">

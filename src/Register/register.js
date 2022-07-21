@@ -68,9 +68,7 @@ const Register = () => {
                 />
               </div>
               <div>
-                <button type="button" className="submit" onClick={register}>
-                  Register
-                </button>
+                <button onClick={register}>Register</button>
               </div>
               <div>
                 <button type="button" className="homebtn">
