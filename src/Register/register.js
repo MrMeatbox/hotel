@@ -8,6 +8,7 @@ import { useState } from "react";
 import "./register.css";
 import "../App.css";
 import { auth } from "../Config/firebaseConfig";
+import startDatabase from "../Config/firebaseConfig";
 import { Link, useHistory, useLocation } from "react-router-dom";
 
 const Register = () => {
