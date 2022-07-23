@@ -1,47 +1,27 @@
-.App {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-}
-:root {
-  --white: #fff;
-  --bg: #313552;
-  --grey: #ccc;
-  --sucess-bg: #6bcb77;
-}
 .wrapper {
   width: 100%;
   max-width: 500px;
   padding: 30px 30px;
-  padding-top: 10px;
   background: #fff;
   border-radius: 20px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
 }
 .wrapper .content .logo img {
-  width: 50%;
-  max-width: 100px;
-  margin-left: 160px;
-  margin-top: 0px;
   position: relative;
-  padding: 20px;
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto;
 }
 .wrapper .content .c1 {
-  font-family: "Fira code";
   margin-top: 10px;
   text-align: center;
-  margin-top: 20px;
 }
-.wrapper .content .c1 h2 {
-  font-family: "Fira code";
+.wrapper .content .c1 span {
   font-size: 1.4em;
   font-weight: 500;
-  margin-top: 10px;
-  padding: 20px;
 }
 .wrapper .content .form {
-  margin-top: 20px;
+  margin-top: 30px;
 }
 .wrapper .content .form form input {
   width: 100%;
@@ -55,8 +35,8 @@
 .wrapper .content .form form input:focus {
   border-color: var(--bg);
 }
-.wrapper .content .form .submit {
-  background: royalblue;
+.wrapper .content .form form button {
+  background: var(--bg);
   color: var(--white);
   font-weight: 500;
   border: none;
@@ -76,7 +56,6 @@
 }
 .status {
   padding: 20px;
-  font-family: "Fira code";
   color: #721c24;
   background-color: #f8d7da;
   border: 1px solid #f5c6cb;
@@ -90,22 +69,4 @@
 }
 .wrapper.hide {
   display: none;
-}
-.forgotpass {
-  font-size: 0.9em;
-  font-family: "Fira code";
-  float: right;
-  margin-left: 20px;
-  background-color: #fff;
-}
-.homebtn {
-  background: red;
-  border: none;
-  border-radius: 2px;
-  padding: 5px 10px;
-  margin-top: 20px;
-  cursor: pointer;
-  font-family: "Fira code";
-  font-weight: 500;
-  color: white;
 }

@@ -32,13 +32,13 @@ const Navbar = () => {
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/bookHotel">
-                  Hotels
+                <a class="nav-link" href="/bookResort">
+                  Resorts
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/test">
-                  Resorts
+                <a class="nav-link" href="/bookHotel">
+                  Hotels
                 </a>
               </li>
               <li class="nav-item dropdown" style={{ marginRight: "65px" }}>
@@ -62,8 +62,8 @@ const Navbar = () => {
                     </a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="#">
-                      Pricing
+                    <a class="dropdown-item" href="/test">
+                      Admin Panel
                     </a>
                   </li>
                   <li>

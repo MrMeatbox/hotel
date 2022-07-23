@@ -1,12 +1,11 @@
 import React from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import project_logo from "../components/cable-car-cabin.png";
+import project_logo from "../components/travel.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faLock } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import "./register.css";
-import "../App.css";
 import { auth } from "../Config/firebaseConfig";
 import startDatabase from "../Config/firebaseConfig";
 import { Link, useHistory, useLocation } from "react-router-dom";
@@ -26,9 +25,9 @@ const Register = () => {
         registerEmail,
         registerPassword
       );
-      console.log(user);
+      alert(registerEmail + " registerd");
     } catch (error) {
-      console.log(error.message);
+      alert(error.message);
     }
   };
   return (
@@ -69,10 +68,31 @@ const Register = () => {
                 />
               </div>
               <div>
-                <button onClick={register}>Register</button>
+                <button
+                  onClick={register}
+                  style={{ backgroundColor: "red", width: "100%" }}
+                >
+                  Register
+                </button>
               </div>
               <div>
-                <button type="button" className="homebtn">
+                <p
+                  style={{
+                    textAlign: "center",
+                    marginTop: "25px",
+                    fontWeight: "500",
+                  }}
+                >
+                  Already have an account?
+                </p>
+                <button
+                  type="button"
+                  style={{
+                    backgroundColor: "royalBlue",
+                    width: "100%",
+                    marginTop: "20px",
+                  }}
+                >
                   <Link
                     to="/login"
                     style={{

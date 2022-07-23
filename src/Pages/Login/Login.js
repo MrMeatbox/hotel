@@ -1,12 +1,10 @@
 import React from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import project_logo from "../../components/cable-car-cabin.png";
+import project_logo from "../../components/travel.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faLock } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
-import "./Login.css";
-import "../../App.css";
 import { auth } from "../../Config/firebaseConfig";
 import { Link, useHistory, useLocation } from "react-router-dom";
 
@@ -67,11 +65,18 @@ const Login = () => {
                     }}
                   />
                 </div>
-                <div className="forgotpass">
+                <div>
                   <a href="/fogotpass">Forgot password?</a>
                 </div>
                 <div>
-                  <button onClick={login}>
+                  <button
+                    onClick={login}
+                    style={{
+                      backgroundColor: "red",
+                      width: "100%",
+                      marginTop: "20px",
+                    }}
+                  >
                     <Link
                       to="/home"
                       type="button"
@@ -87,14 +92,30 @@ const Login = () => {
                     Login
                   </button>
                 </div>
+                <p
+                  style={{
+                    textAlign: "center",
+                    marginTop: "25px",
+                    fontWeight: "500",
+                  }}
+                >
+                  Already have an account?
+                </p>
                 <div>
-                  <button type="button" className="homebtn">
+                  <button
+                    type="button"
+                    style={{
+                      backgroundColor: "royalBLue",
+                      width: "100%",
+                    }}
+                  >
                     <Link
                       to="/register"
                       style={{
                         textDecoration: "none",
                         border: "none",
                         color: "white",
+                        marginTop: "20px",
                       }}
                     >
                       {" "}

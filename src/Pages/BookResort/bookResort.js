@@ -1,17 +1,16 @@
-//import "./bookHotel.css";
 import { database } from "../../Config/firebaseConfig";
 import { useState, useEffect } from "react";
 import { Info } from "@mui/icons-material";
 import { getDatabase } from "firebase/database";
 import { ref, onValue } from "firebase/database";
 import React from "react";
-import Card from "../../ResortCompo/Card";
+import Card from "../../HotelCompo/Card";
 import Register from "../../Register/register";
-const Book = () => {
+const BookResort = () => {
   const [data, setdata] = useState([]);
 
   const fetchData = () => {
-    const dbRef = ref(database, "resortRecord");
+    const dbRef = ref(database, "hotelRecord");
     onValue(dbRef, (snapshot) => {
       let records = [];
       snapshot.forEach((element) => {
@@ -33,7 +32,7 @@ const Book = () => {
   return (
     <div>
       <center>
-        <h2>Choose resorts:</h2>
+        <h2>Choose Hotel:</h2>
         <Card data={data} />
         {/* <p>Resort name: {data.resortName}</p>
         <p>{data.resortLocation}</p>
@@ -45,4 +44,4 @@ const Book = () => {
   );
 };
 
-export default Book;
+export default BookResort;

@@ -3,6 +3,7 @@ import Register from "./Register/register";
 import Login from "./Pages/Login/Login";
 import Home from "./Pages/Homepage/Home";
 import Book from "./Pages/BookHotel/bookHotel";
+import BookResort from "./Pages/BookResort/bookResort";
 import Welcome from "./Pages/welcome/welcome";
 import Forgetpass from "./Pages/Forgetpass/Forgetpass";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -38,8 +39,11 @@ function App() {
             <Register />
           </Route>
 
-          <Route exact path="/bookHotel">
+          <Route exact path="/bookResort">
             <Book />
+          </Route>
+          <Route exact path="/bookHotel">
+            <BookResort />
           </Route>
         </Switch>
       </Router>
