@@ -83,7 +83,7 @@ const Register = () => {
                     fontWeight: "500",
                   }}
                 >
-                  Already have an account?
+                  Already have an account ?
                 </p>
                 <button
                   type="button"

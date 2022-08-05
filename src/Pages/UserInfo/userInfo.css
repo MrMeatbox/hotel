@@ -1,0 +1,43 @@
+.info-backgorund {
+  background-image: linear-gradient(to right, #1034a6, #f62d2d);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 713px;
+}
+.user-input {
+  border-radius: 4px;
+  margin: 7px;
+  width: 450px;
+  height: 50px;
+  text-align: center;
+}
+
+.info-submit {
+  height: 50px;
+  width: 450px;
+  border: none;
+  margin: 7px;
+  border-radius: 4px;
+  background-color: royalblue;
+  color: white;
+  font-family: roboto;
+  font-weight: 400;
+}
+
+.info-submit:hover {
+  background-color: navy;
+  transition: 0.5s;
+}
+.info-heading {
+  font-family: lemonmilk;
+  padding: 10px;
+  color: black;
+}
+
+@font-face {
+  font-family: lemonmilk;
+  src: url("../../Register/fonts/LEMONMILK-Regular.otf");
+  /* font-family: vogue;
+    src: url("./fonts/Vogue.ttf");*/
+}

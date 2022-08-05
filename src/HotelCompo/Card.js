@@ -1,11 +1,13 @@
 import React from "react";
 import "./Card.css";
 import project_logo from ".././components/tanguar.jpg";
+import { useHistory } from "react-router-dom";
 
 const Card = ({ data }) => {
+  const history = useHistory();
   console.log(data);
   const bookHotel = () => {
-    alert("Added to cart!");
+    history.push("/bookPage");
   };
   return (
     <div>

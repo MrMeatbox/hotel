@@ -5,6 +5,7 @@ import { getDatabase } from "firebase/database";
 import { ref, onValue } from "firebase/database";
 import React from "react";
 import Card from "../../HotelCompo/Card";
+import logo from "../../components/travel.jpg";
 import Register from "../../Register/register";
 const BookResort = () => {
   const [data, setdata] = useState([]);
@@ -30,7 +31,7 @@ const BookResort = () => {
   }, []);
 
   return (
-    <div>
+    <div className="background">
       <center>
         <h2>Choose Hotel:</h2>
         <Card data={data} />

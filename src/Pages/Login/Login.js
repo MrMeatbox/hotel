@@ -7,19 +7,25 @@ import { faLock } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import { auth } from "../../Config/firebaseConfig";
 import { Link, useHistory, useLocation } from "react-router-dom";
-
+import { Password } from "@mui/icons-material";
+import { createContext } from "react";
+const emailContext = createContext();
 const Login = () => {
   const [loginEmail, setLoginEmail] = useState("");
   const [loginPassword, setLoginPassword] = useState("");
   const history = useHistory();
 
-  const login = async () => {
+  const emailChange = (e) => {
+    setLoginEmail(e.target.value);
+  };
+  const passwordChange = (e) => {
+    setLoginPassword(e.target.value);
+  };
+
+  console.log(loginEmail);
+  const login = () => {
     try {
-      const user = await signInWithEmailAndPassword(
-        auth,
-        loginEmail,
-        loginPassword
-      );
+      signInWithEmailAndPassword(auth, loginEmail, loginPassword);
       console.log("logged in");
       history.push("/home");
     } catch (error) {
@@ -38,7 +44,7 @@ const Login = () => {
           </div>
           <div className="form">
             <div className="c1">
-              <h2>Continue your journey here!</h2>
+              <h2 style={{ fontfamily: "vlogger" }}>Welcome back!</h2>
             </div>
             <div className="form">
               <div className="status"></div>
@@ -49,9 +55,8 @@ const Login = () => {
                     type="text"
                     id="input1"
                     placeholder="Enter email address"
-                    onChange={(event) => {
-                      setLoginEmail(event.target.value);
-                    }}
+                    onChange={emailChange}
+                    value={loginEmail}
                   />
                 </div>
                 <div className="eInput">
@@ -60,9 +65,8 @@ const Login = () => {
                     type="password"
                     id="input2"
                     placeholder="Enter password"
-                    onChange={(event) => {
-                      setLoginPassword(event.target.value);
-                    }}
+                    onChange={passwordChange}
+                    value={loginPassword}
                   />
                 </div>
                 <div>
@@ -74,7 +78,7 @@ const Login = () => {
                     style={{
                       backgroundColor: "red",
                       width: "100%",
-                      marginTop: "20px",
+                      marginTop: "10px",
                     }}
                   >
                     <Link
@@ -99,7 +103,7 @@ const Login = () => {
                     fontWeight: "500",
                   }}
                 >
-                  Already have an account?
+                  Don't have any account?
                 </p>
                 <div>
                   <button
@@ -115,7 +119,6 @@ const Login = () => {
                         textDecoration: "none",
                         border: "none",
                         color: "white",
-                        marginTop: "20px",
                       }}
                     >
                       {" "}

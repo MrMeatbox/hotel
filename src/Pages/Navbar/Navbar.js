@@ -1,6 +1,16 @@
 import React from "react";
-
+import { useEffect } from "react";
+import { signOut, onAuthStateChanged } from "firebase/auth";
+import { auth } from "../../Config/firebaseConfig";
+import { useHistory } from "react-router-dom";
 const Navbar = () => {
+  const history = useHistory();
+
+  const handleSignOut = () => {
+    signOut(auth).then(() => {
+      history.push("/login");
+    });
+  };
   return (
     <>
       <nav
@@ -62,12 +72,12 @@ const Navbar = () => {
                     </a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="/test">
-                      Admin Panel
+                    <a class="dropdown-item" href="/userInfo">
+                      Update Profile
                     </a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="/">
+                    <a class="dropdown-item" href="#" onClick={handleSignOut}>
                       Logout
                     </a>
                   </li>

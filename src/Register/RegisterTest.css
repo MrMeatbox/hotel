@@ -1,0 +1,36 @@
+.reg-img {
+  /* background-image: url("file:///D:/study/level%20-3%20term-1/Internet%20program/hotel/src/components/resortImg2.jpg"); */
+  background-image: linear-gradient(to right, #1034a6, #f62d2d);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 713px;
+}
+.btn-submit {
+  background-color: royalblue;
+}
+.btn-submit:hover {
+  background-color: red;
+  transition: 0.3s;
+}
+
+.btn-back {
+  background-color: skyblue;
+}
+
+.btn-back:hover {
+  background-color: navy;
+  transition: 0.7s;
+}
+
+.reg-title {
+  font-weight: 400;
+  font-family: lemonmilk;
+  color: black;
+}
+@font-face {
+  font-family: lemonmilk;
+  src: url("./fonts/LEMONMILK-Regular.otf");
+  /* font-family: vogue;
+  src: url("./fonts/Vogue.ttf");*/
+}

@@ -1,6 +1,7 @@
 import { async } from "@firebase/util";
 import React from "react";
 import { useState } from "react";
+import "./Login.css";
 
 const Test = () => {
   const upload = async (event) => {
@@ -79,67 +80,91 @@ const Test = () => {
   };
   return (
     <div>
-      <div>
-        <h2> RESORT INFORMATION</h2>
+      <br />
+      <br />
+      <br />
+      <br />
+      <center>
         <div>
-          <input
-            placeholder="Resort name"
-            name="resortName"
-            onChange={postResortData}
-            value={resortData.resortName}
-          ></input>
-          <input
-            placeholder="Resort location"
-            name="resortLocation"
-            onChange={postResortData}
-            value={resortData.resortLocation}
-          ></input>
-          <input
-            placeholder="Price"
-            name="resortPrice"
-            onChange={postResortData}
-            value={resortData.resortPrice}
-          ></input>
-          <input
-            placeholder="Average ratings"
-            name="resortRating"
-            onChange={postResortData}
-            value={resortData.resortRating}
-          ></input>
-          <button onClick={upload}>Upload resort to database</button>
+          <h2> RESORT INFORMATION</h2>
+          <div>
+            <input
+              style={{ border: "5px" }}
+              placeholder="Resort name"
+              name="resortName"
+              onChange={postResortData}
+              value={resortData.resortName}
+            ></input>
+            <br />
+            <input
+              placeholder="Resort location"
+              name="resortLocation"
+              onChange={postResortData}
+              value={resortData.resortLocation}
+            ></input>
+            <br />
+            <input
+              placeholder="Price"
+              name="resortPrice"
+              onChange={postResortData}
+              value={resortData.resortPrice}
+            ></input>
+            <br />
+            <input
+              placeholder="Average ratings"
+              name="resortRating"
+              onChange={postResortData}
+              value={resortData.resortRating}
+            ></input>
+            <br />
+            <br />
+            <button onClick={upload}>Upload resort to database</button>
+            <br />
+          </div>
         </div>
-      </div>
-
-      <div>
-        <h2> HOTEL INFORMATION</h2>
+      </center>
+      <br />
+      <br />
+      <br />
+      <br />
+      <center>
         <div>
-          <input
-            placeholder="Hotel name"
-            name="hotelName"
-            onChange={postHotelData}
-            value={hotelData.hotelName}
-          ></input>
-          <input
-            placeholder="Hotel location"
-            name="hotelLocation"
-            onChange={postHotelData}
-            value={hotelData.hotelLocation}
-          ></input>
-          <input
-            placeholder="Price"
-            name="hotelPrice"
-            onChange={postHotelData}
-            value={hotelData.hotelPrice}
-          ></input>
-          <input
-            placeholder="Average ratings"
-            name="hotelRating"
-            onChange={postHotelData}
-            value={hotelData.hotelRating}
-          ></input>
-          <button onClick={uploadHotel}>Upload hotel to database</button>
+          <h2> HOTEL INFORMATION</h2>
+          <div>
+            <input
+              placeholder="Hotel name"
+              name="hotelName"
+              onChange={postHotelData}
+              value={hotelData.hotelName}
+            ></input>
+            <br />
+            <input
+              placeholder="Hotel location"
+              name="hotelLocation"
+              onChange={postHotelData}
+              value={hotelData.hotelLocation}
+            ></input>
+            <br />
+            <input
+              placeholder="Price"
+              name="hotelPrice"
+              onChange={postHotelData}
+              value={hotelData.hotelPrice}
+            ></input>
+            <br />
+            <input
+              placeholder="Average ratings"
+              name="hotelRating"
+              onChange={postHotelData}
+              value={hotelData.hotelRating}
+            ></input>
+            <br />
+            <br />
+            <button onClick={uploadHotel}>Upload hotel to database</button>
+            <br />
+          </div>
         </div>
-      </div>
+      </center>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-//import "./bookHotel.css";
+import "./bookHotel.css";
 import { database } from "../../Config/firebaseConfig";
 import { useState, useEffect } from "react";
 import { Info } from "@mui/icons-material";
@@ -7,6 +7,7 @@ import { ref, onValue } from "firebase/database";
 import React from "react";
 import Card from "../../ResortCompo/Card";
 import Register from "../../Register/register";
+import logo from "../../components/travel.jpg";
 const Book = () => {
   const [data, setdata] = useState([]);
 
@@ -31,7 +32,7 @@ const Book = () => {
   }, []);
 
   return (
-    <div>
+    <div className="background">
       <center>
         <h2>Choose resorts:</h2>
         <Card data={data} />

@@ -1,0 +1,22 @@
+.image {
+  background-image: url("file:///D:/study/level%20-3%20term-1/Internet%20program/hotel/src/components/admin.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 713px;
+}
+
+.admin_head {
+  -webkit-text-fill-color: white;
+  -webkit-text-stroke: 2px black;
+  font-size: 60px;
+}
+h4 {
+  -webkit-text-stroke: 0.7px black;
+  font-size: 30px;
+  color: white;
+}
+
+input {
+  border: none;
+}
